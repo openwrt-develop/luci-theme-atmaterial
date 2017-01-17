@@ -448,6 +448,10 @@ header > .container > a[class="brand"]:after {
     content: "\e01b";
 }
 
+.main > .main-left > .nav > .slide > a[data-title="Wifi Schedule"]:before {
+    content: "\e00c";
+}
+
 .main > .main-left > .nav > li > a[data-title="Logout"] {
     padding-left:36px;
     line-height:40px;
