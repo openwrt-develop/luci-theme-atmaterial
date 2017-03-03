@@ -26,7 +26,9 @@
 	local disp = require "luci.dispatcher"
 
 	local boardinfo = util.ubus("system", "board")
-
+	local boardinfo={}
+	boardinfo.hostname=sys.hostname()
+	
 	local request  = disp.context.path
 	local request2 = disp.context.request
 
@@ -128,7 +130,7 @@
     <link rel="icon" href="<%=media%>/logo.png" sizes="144x144">
     <link rel="apple-touch-icon-precomposed" href="<%=media%>/logo.png" sizes="144x144">
 
-    <link rel="stylesheet" href="<%=media%>/css/style.css">
+    <link rel="stylesheet" href="<%=media%>/css/style.css?v=git-17.051.53299-a100738">
     <link rel="shortcut icon" href="<%=media%>/favicon.ico">
     <% if node and node.css then %>
         <link rel="stylesheet" href="<%=resource%>/<%=node.css%>">
@@ -138,7 +140,7 @@
             <%-= css %>
         </style>
     <% end -%>
-    <script src="<%=resource%>/xhr.js"></script>
+    <script src="<%=resource%>/xhr.js?v=git-17.051.53299-a100738"></script>
 </head>
 
 <body class="lang_<%=luci.i18n.context.lang%> <%- if node then %><%= striptags( node.title ) %><%- end %> <% if luci.dispatcher.context.authsession then %>logged-in<% end %>">
@@ -185,7 +187,7 @@
 				 <%-
 				 for i, r in ipairs(childs) do
 				 local nnode = node.nodes[r]
-				 local href  = controller .. prefix .. r ..
+				 local href  = controller .. "/" .. prefix .. r ..
 				 (nnode.query and http.build_querystring(nnode.query) or "")
 				 %>
 				 <li><a data-title="<%=pcdata(striptags(nnode.title))%>" href="<%=pcdata(href)%>"><%=pcdata(striptags(translate(nnode.title)))%></a></li>

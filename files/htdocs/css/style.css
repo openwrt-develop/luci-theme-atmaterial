@@ -448,10 +448,6 @@ header > .container > a[class="brand"]:after {
     content: "\e01b";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="Wifi Schedule"]:before {
-    content: "\e00c";
-}
-
 .main > .main-left > .nav > li > a[data-title="Logout"] {
     padding-left:36px;
     line-height:40px;
@@ -624,6 +620,7 @@ fieldset {
     background-color: #FFF;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
     border-radius: 4px;
+
     -webkit-overflow-scrolling: touch;
 }
 
@@ -677,9 +674,11 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
 /* fix progress bar */
 #swaptotal > div,
 #swapfree > div,
+#swapcache > div,
 #memfree > div,
 #membuff > div,
 #conns > div,
+#memcache > div,
 #memtotal > div {
     width: 100% !important;
     border-color:#ccc !important;
@@ -689,9 +688,11 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
 
 #swaptotal > div > div,
 #swapfree > div > div,
+#swapcache > div > div,
 #memfree > div > div,
 #membuff > div > div,
 #conns > div > div,
+#memcache > div > div,
 #memtotal > div > div {
     height: 1.4rem !important;
     background-color: #e4eaec !important;
@@ -799,7 +800,7 @@ form.inline + form.inline,
 .cbi-input-reset,
 .cbi-button-remove {
     color: #fff !important;
-background: #617486;
+    background: #617486;
 }
 
 .a-to-btn {
@@ -843,7 +844,7 @@ background: #617486;
     border-top: 1px solid #e4eaec;
     border-left: 1px solid #e4eaec;
     border-right: 1px solid #e4eaec;
-        background-color: #F7F7F7;
+    background-color: #F7F7F7;
 }
 
 .cbi-tabmenu > li:hover {
@@ -1014,7 +1015,7 @@ background: #617486;
 
 /* change */
 #wan4_i, #wan6_i {
-width:50px !important;
+    width:50px !important;
 }
 
 .uci-change-list {
@@ -1315,7 +1316,7 @@ header > .container > .pull-right > * {
 }
 
 .cbi-map fieldset h3 {
- padding:10px 0;
+    padding:10px 0;
  }
 
 .cbi-map fieldset ul li {
@@ -1701,12 +1702,12 @@ body.lang_pl.node-main-login .cbi-value-title {
         -webkit-overflow-scrolling: touch;
     }
 
-    .node-status-iptables > .main div > .cbi-map > form input[type="submit"]{
+    .node-status-iptables > .main div > .cbi-map > form input[type="submit"] {
         width: 100% !important;
         margin: 0;
     }
 
-    .node-status-iptables > .main div > .cbi-map > form input[type="submit"] + input[type="submit"]{
+    .node-status-iptables > .main div > .cbi-map > form input[type="submit"] + input[type="submit"] {
         margin-top: 1rem;
     }
 }
