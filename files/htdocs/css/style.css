@@ -441,8 +441,14 @@ header > .container > a[class="brand"]:after {
 .main > .main-left > .nav > .slide > a[data-title="Network"]:before {
     content: "\e00e";
 }
-.main > .main-left > .nav > .slide > a[data-title="Usbapps"]:before {
-    content: "\e00b";
+.main > .main-left > .nav > .slide > a[data-title="Control"]:before {
+    content: "\e023";
+}
+.main > .main-left > .nav > .slide > a[data-title="VPN"]:before {
+    content: "\e007";
+}
+.main > .main-left > .nav > .slide > a[data-title="QOS"]:before {
+    content: "\e00f";
 }
 .main > .main-left > .nav > .slide > a[data-title="Services"]:before {
     content: "\e01b";
