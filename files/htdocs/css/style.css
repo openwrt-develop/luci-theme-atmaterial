@@ -441,9 +441,27 @@ header > .container > a[class="brand"]:after {
 .main > .main-left > .nav > .slide > a[data-title="Network"]:before {
     content: "\e00e";
 }
+
+.main > .main-left > .nav > .slide > a[data-title="Wireless"]:before {
+    content: "\e00c";
+}
+
 .main > .main-left > .nav > .slide > a[data-title="Usbapps"]:before {
     content: "\e00b";
 }
+
+.main > .main-left > .nav > .slide > a[data-title="Control"]:before {
+    content: "\e023";
+}
+
+.main > .main-left > .nav > .slide > a[data-title="VPN"]:before {
+    content: "\e007";
+}
+
+.main > .main-left > .nav > .slide > a[data-title="QOS"]:before {
+    content: "\e00f";
+}
+
 .main > .main-left > .nav > .slide > a[data-title="Services"]:before {
     content: "\e01b";
 }
@@ -620,7 +638,6 @@ fieldset {
     background-color: #FFF;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
     border-radius: 4px;
-
     -webkit-overflow-scrolling: touch;
 }
 
@@ -1317,7 +1334,7 @@ header > .container > .pull-right > * {
 
 .cbi-map fieldset h3 {
     padding:10px 0;
- }
+}
 
 .cbi-map fieldset ul li {
     background:#f7f7f7;
