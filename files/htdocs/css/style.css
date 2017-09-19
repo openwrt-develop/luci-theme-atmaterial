@@ -384,7 +384,7 @@ header > .container > a[class="brand"]:after {
 }
 
 .main > .main-left > .nav > li:nth-last-child(1) {
-    font-size: 11pt;
+    font-size: 10pt;
     height:40px;
 }
 
@@ -626,6 +626,7 @@ fieldset {
     background-color: #FFF;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
     border-radius: 4px;
+
     -webkit-overflow-scrolling: touch;
 }
 
@@ -657,7 +658,7 @@ table {
 }
 
 table > tbody > tr > td, table > tbody > tr > th, table > tfoot > tr > td, table > tfoot > tr > th, table > thead > tr > td, table > thead > tr > th {
-    padding: 7px;
+    padding: 12px;
     line-height: 1.42857143;
     border-top: 1px dashed #EEE;
 
@@ -881,9 +882,6 @@ form.inline + form.inline,
     display: table-cell;
 }
 
-.cbi-value-field {
-    padding:6px 10px;
-}
 .cbi-value-helpicon > img {
     display: none;
 }
@@ -904,12 +902,13 @@ form.inline + form.inline,
     vertical-align: middle;
     padding:6px 10px;
     width: 23rem;
+    float: left;
     text-align: right;
     display: table-cell;
 }
 
 .cbi-value {
-    padding: 2px;
+    padding: 5px;
     vertical-align: middle;
     display: inline-block;
     width: 100%;
@@ -1139,7 +1138,6 @@ form.inline + form.inline,
 .cbi-value-field .cbi-input-checkbox,
 .cbi-value-field .cbi-input-radio {
     vertical-align: middle;
-	height: 25px;
 }
 
 .cbi-section-table-row > .cbi-value-field .cbi-input-select {
@@ -1441,6 +1439,11 @@ body.lang_pl.node-main-login .cbi-value-title {
         padding: 0.2rem 0.6rem;
     }
 
+    .cbi-value-title {
+        width: 15rem;
+        padding-right: 0.6rem;
+    }
+
     fieldset {
         padding: 1rem;
     }
@@ -1547,6 +1550,11 @@ body.lang_pl.node-main-login .cbi-value-title {
         display: none !important;
     }
 
+    .cbi-value-title {
+        width: 9rem;
+        padding-right: 1rem;
+    }
+
     .node-network-diagnostics > .main .cbi-map fieldset > div * {
         width: 100% !important;
     }
@@ -1598,6 +1606,15 @@ body.lang_pl.node-main-login .cbi-value-title {
 
     .main > .main-left > .nav > .slide > .slide-menu > li > a {
         font-size: 1.1rem;
+    }
+
+    .cbi-value-title {
+        width: 100%;
+        min-width: 0rem !important;
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        text-align: left;
     }
 
     .cbi-value-field, .cbi-value-description {
@@ -1726,10 +1743,10 @@ body.lang_pl.node-main-login .cbi-value-title {
 @media screen and (min-width: 1600px) {
     .cbi-value input[type="password"],
     .cbi-value input[type="text"] {
-        min-width: 35rem;
+        min-width: 25rem;
     }
 
     .cbi-value-field .cbi-input-select {
-        min-width: 35rem;
+        min-width: 25rem;
     }
 }
