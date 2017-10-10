@@ -880,6 +880,9 @@ form.inline + form.inline,
 .cbi-value-field,
 .cbi-value-description {
     display: table-cell;
+}
+
+.cbi-value-field {
 	padding:6px 10px;
 }
 
@@ -903,7 +906,6 @@ form.inline + form.inline,
     vertical-align: middle;
     padding:6px 10px;
     width: 23rem;
-    float: left;
     text-align: right;
     display: table-cell;
 }
@@ -1602,6 +1604,10 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 
     .main > .main-left > .nav > .slide > .menu {
+        font-size: 1.3rem;
+    }
+
+    .main > .main-left > .nav > li > a[data-title="Logout"] {
         font-size: 1.3rem;
     }
 
