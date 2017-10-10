@@ -102,7 +102,7 @@ html, body {
     font-family: Roboto, 'Microsoft Yahei' !important;
     font-size:10pt;
     line-height: 150%;
-    color:#76838f;
+	color:#76838f;
     /*min-width: 960px;*/
 }
 
@@ -448,7 +448,7 @@ header > .container > a[class="brand"]:after {
     content: "\e007";
 }
 .main > .main-left > .nav > .slide > a[data-title="QOS"]:before {
-    content: "\e00f";
+    content: "\e015";
 }
 .main > .main-left > .nav > .slide > a[data-title="Services"]:before {
     content: "\e01b";
@@ -658,7 +658,7 @@ table {
 }
 
 table > tbody > tr > td, table > tbody > tr > th, table > tfoot > tr > td, table > tfoot > tr > th, table > thead > tr > td, table > thead > tr > th {
-    padding: 12px;
+    padding: 7px;
     line-height: 1.42857143;
     border-top: 1px dashed #EEE;
 
@@ -880,6 +880,7 @@ form.inline + form.inline,
 .cbi-value-field,
 .cbi-value-description {
     display: table-cell;
+	padding:6px 10px;
 }
 
 .cbi-value-helpicon > img {
@@ -908,7 +909,7 @@ form.inline + form.inline,
 }
 
 .cbi-value {
-    padding: 5px;
+    padding: 2px;
     vertical-align: middle;
     display: inline-block;
     width: 100%;
@@ -1743,10 +1744,10 @@ body.lang_pl.node-main-login .cbi-value-title {
 @media screen and (min-width: 1600px) {
     .cbi-value input[type="password"],
     .cbi-value input[type="text"] {
-        min-width: 25rem;
+        min-width: 35rem;
     }
 
     .cbi-value-field .cbi-input-select {
-        min-width: 25rem;
+        min-width: 35rem;
     }
 }
