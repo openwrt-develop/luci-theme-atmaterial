@@ -342,10 +342,9 @@ header > .container > a[class="brand"]:after {
     color: #FFF;
 }
 
-.errorbox,
 .alert-message {
     margin: 5px 0 0 0;
-    padding: 2rem;
+    padding: 1rem;
     border: 0;
     font-weight: normal;
     font-style: normal;
@@ -358,14 +357,17 @@ header > .container > a[class="brand"]:after {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 2px 0 rgba(0, 0, 0, .12);
 }
 
-.errorbox {
-    color: #fff;
-    background-color: #f0ad4e;
-    border-color: #eea236;
-}
-
 .error {
     color: red;
+}
+
+.alert-message > h4 {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.alert-message > * {
+    margin: .5rem 0;
 }
 
 #maincontent > .container > div:nth-child(1).alert-message.warning > a {
@@ -788,6 +790,8 @@ td > table > tbody > tr > td,
     user-select: none;
     font-size: 10pt;
     width: auto !important;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .cbi-button:hover,
@@ -1528,6 +1532,7 @@ body.lang_pl.node-main-login .cbi-value-title {
         width: calc(100% - 15rem);
     }
 
+    .btn,
     .cbi-button {
         padding: 0.3rem 0.6rem;
         font-size: 1rem;
