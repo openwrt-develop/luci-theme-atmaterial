@@ -711,11 +711,6 @@ fieldset > .table > .tbody > .tr:nth-of-type(2n) {
     background-color: #f9f9f9;
 }
 
-fieldset > table > tbody > tr:nth-of-type(2n),
-fieldset > .table > .tbody > .tr:nth-of-type(2n) {
-    background-color: #f9f9f9;
-}
-
 /* fix progress bar */
 #swaptotal > div,
 #swapfree > div,
