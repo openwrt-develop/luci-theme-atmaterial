@@ -685,6 +685,7 @@ table,
     border-collapse: collapse;
     width: 100%;
     border: 1px solid #eee;
+	white-space: nowrap;
 }
 
 table > tbody > tr > td, table > tbody > tr > th, table > tfoot > tr > td, table > tfoot > tr > th, table > thead > tr > td, table > thead > tr > th,
@@ -907,8 +908,8 @@ form.inline + form.inline,
     background-color: #F7F7F7;
 }
 
-.cbi-section-remove:nth-of-type(2n),
-.cbi-section-node:nth-of-type(2n){
+.cbi-section-remove:nth-of-type(odd),
+.cbi-section-node:nth-of-type(odd){
     background-color: #f9f9f9;
 }
 
@@ -1260,7 +1261,7 @@ td > .ifacebadge,
     margin: 0.5rem;
 }
 
-div.cbi-value var, td.cbi-value-field var {
+div.cbi-value var, div.td.cbi-value-field var, td.cbi-value-field var {
     font-style: italic;
     color: #0069D6;
 }
