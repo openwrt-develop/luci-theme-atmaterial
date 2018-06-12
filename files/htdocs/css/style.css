@@ -122,7 +122,7 @@ html, body {
     font-family: Roboto, 'Microsoft Yahei' !important;
     font-size:10pt;
     line-height: 150%;
-	color:#76838f;
+	color:#695b5b;
     /*min-width: 960px;*/
 }
 
@@ -131,7 +131,7 @@ body div {
 }
 
 a {
-    color: #76838f;
+    color: #0d90c3;
     text-decoration: none;
 }
 
@@ -147,7 +147,7 @@ select {
 
 select,
 input {
-    color: #76838f;
+    color: #007d65;
     padding: 6px 10px;
     margin: 0;
     height: 34px;
@@ -674,7 +674,7 @@ fieldset > fieldset {
     width: 100%;
     display: block;
     line-height: 1;
-    color: #76838f;
+    color: #695b5b;
     font-size: 10pt;
     padding-bottom: 10px;
 }
@@ -704,8 +704,8 @@ table > tbody > tr > td, table > tbody > tr > th, table > tfoot > tr > td, table
     text-align: center;
 }
 
-fieldset > table > tbody > tr:nth-of-type(odd),
-fieldset > .table > .tbody > .tr:nth-of-type(odd) {
+fieldset > table > tbody > tr:nth-of-type(2n),
+fieldset > .table > .tbody > .tr:nth-of-type(2n) {
     background-color: #f9f9f9;
 }
 
@@ -726,7 +726,7 @@ fieldset > .table > .tbody > .tr:nth-of-type(2n) {
     width: 100% !important;
     border-color:#ccc !important;
     height:20px !important;
-    color:#76838f !important;
+    color:#90EE90 !important;
 }
 
 #swaptotal > div > div,
@@ -738,7 +738,7 @@ fieldset > .table > .tbody > .tr:nth-of-type(2n) {
 #memcache > div > div,
 #memtotal > div > div {
     height: 1.4rem !important;
-    background-color: #e4eaec !important;
+    background-color: #90EE90 !important;
 }
 
 /* fix multiple table */
@@ -845,6 +845,7 @@ form.inline + form.inline,
 }
 
 .cbi-input-reset,
+.cbi-section-remove > .cbi-button,
 .cbi-button-remove {
     color: #fff !important;
     background: #617486;
@@ -870,7 +871,7 @@ form.inline + form.inline,
 .cbi-tabmenu > li > a,
 .tabs > li > a {
     text-decoration: none;
-    color: #76838f;
+    color: #695b5b;
     padding: 0.9rem 1.5rem;
 }
 
@@ -1007,10 +1008,6 @@ form.inline + form.inline,
     text-align: right !important;
 }
 
-.center {
-    text-align: center !important;
-}
-
 .inline {
     display: inline;
 }
@@ -1032,18 +1029,60 @@ form.inline + form.inline,
 
 .ifacebadge {
     display: inline-flex;
+	border-bottom: 1px solid #CCCCCC;
     padding: 0.5rem 1rem;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+td > .ifacebadge,
+.td > .ifacebadge {
+    background-color: #F0F0F0;
+    font-size: 0.9rem;
+}
+
 .ifacebadge > img {
     float: right;
     margin-left: 0.3rem;
+    align-self: start;
 }
 
 /*textarea*/
+.network-status-table {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.network-status-table .ifacebox {
+    margin: .5em;
+    flex-grow: 1;
+}
+
+.network-status-table .ifacebox-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.network-status-table .ifacebox-body > span {
+    flex: 10;
+}
+
+.network-status-table .ifacebox-body > div {
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+}
+
+.network-status-table .ifacebox-body .ifacebadge {
+    flex: 1;
+    margin: .5em .25em 0 .25em;
+    padding: .5em;
+    min-width: 220px;
+    background-color: #EEE;
+    align-items: center;
+}
 
 .cbi-input-textarea {
     color: #0a1eb9;
@@ -1163,10 +1202,27 @@ form.inline + form.inline,
 .ifacebox {
     border: 1px solid #e4eaec;
     background-color: #f9f9f9;
+    display: inline-flex;
+    flex-direction: column;
+    line-height: 1.2em;
+    min-width: 100px;
+}
+
+.ifacebox-head {
+    padding: .25em;
+    background: #eee;
+}
+
+.ifacebox-head.active {
+    background: #90EE90;
+}
+
+.ifacebox-body {
+    padding: .25em;
 }
 
 .ifacebox strong {
-    color:#f7f7f7;
+    color:#695b5b;
 }
 
 .cbi-image-button {
@@ -1237,7 +1293,7 @@ small {
     white-space: pre-wrap;
     word-wrap: break-word;
     font-size: 10pt;
-    color: #76838f;
+    color: #695b5b;
 }
 
 input[name="ping"],
@@ -1277,7 +1333,7 @@ header > .container > .pull-right > * {
 
 .showSide:before {
     display:none;
-    color:#76838f;
+    color:#695b5b;
     content: "\e029";
     font-family: "advancedtomato" !important;
     font-weight: normal !important;
@@ -1413,7 +1469,7 @@ header > .container > .pull-right > * {
 .node-system-packages > .main table tr td:nth-last-child(1) {
     white-space: normal;
     font-size: small;
-    color: #76838f;
+    color: #695b5b;
 }
 
 .node-system-packages > .main .cbi-tabmenu > li > a, .tabs > li > a {
@@ -1445,6 +1501,11 @@ header > .container > .pull-right > * {
 .node-system-packages .cbi-tabmenu,
 .node-system-flashops .cbi-tabmenu {
     border: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 2px 0 rgba(0, 0, 0, .12);
+}
+
+.node-system-flashops form.inline + form.inline {
+    margin-left: 0;
 }
 
 #cbi-firewall-redirect table *,
