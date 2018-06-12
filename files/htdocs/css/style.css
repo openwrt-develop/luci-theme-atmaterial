@@ -702,7 +702,8 @@ table > tbody > tr > td, table > tbody > tr > th, table > tfoot > tr > td, table
 }
 
 .cbi-section-table-row {
-    text-align: center;
+	text-align: center;
+	border-top: 1px dashed #EEE;
 }
 
 fieldset > table > tbody > tr:nth-of-type(2n),
