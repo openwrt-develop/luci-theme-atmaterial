@@ -208,7 +208,7 @@
     <link rel="icon" href="<%=media%>/logo.png" sizes="144x144">
     <link rel="apple-touch-icon-precomposed" href="<%=media%>/logo.png" sizes="144x144">
 
-    <link rel="stylesheet" href="<%=media%>/css/style.css?v=git-17.051.53299-a100738">
+    <link rel="stylesheet" href="<%=media%>/css/style.css">
     <link rel="shortcut icon" href="<%=media%>/favicon.ico">
     <% if node and node.css then %>
         <link rel="stylesheet" href="<%=resource%>/<%=node.css%>">
@@ -218,7 +218,7 @@
             <%-= css %>
         </style>
     <% end -%>
-    <script src="<%=resource%>/xhr.js?v=git-17.051.53299-a100738"></script>
+    <script src="<%=resource%>/xhr.js"></script>
 </head>
 
 <body class="lang_<%=luci.i18n.context.lang%> <%- if node then %><%= striptags( node.title ) %><%- end %> <% if luci.dispatcher.context.authsession then %>logged-in<% end %>">
@@ -254,4 +254,9 @@
 					 </div>
 				 <%- end -%>
 				 <% if category then render_tabmenu(category, cattree) end %>
-
+				<noscript>
+					<div class="alert-message warning">
+						<strong><%:JavaScript required!%></strong><br />
+						<%:You must enable JavaScript in your browser or LuCI will not work properly.%>
+					</div>
+				</noscript>
