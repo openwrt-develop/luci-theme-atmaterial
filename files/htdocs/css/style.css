@@ -146,7 +146,8 @@ select {
 }
 
 select,
-input {
+input, 
+.cbi-dropdown {
     color: #007d65;
     padding: 6px 10px;
     margin: 0;
@@ -648,8 +649,6 @@ fieldset {
     font-family: inherit;
 
     min-width: inherit;
-    overflow-x: hidden;
-    overflow-y: hidden;
 
     border-radius: 0;
     background-color: #FFF;
@@ -989,6 +988,170 @@ form.inline + form.inline,
     margin-bottom:10px;
     padding-left:5px;
     font-size: small;
+}
+
+.cbi-dropdown {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    height: auto;
+}
+
+.cbi-dropdown:focus {
+    outline: 2px solid #4b6e9b;
+}
+
+.cbi-dropdown > ul {
+    margin: 0 !important;
+    padding: 0;
+    list-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    width: 100%;
+}
+
+.cbi-dropdown > ul.preview {
+    display: none;
+}
+
+.cbi-dropdown > .open {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-basis: 15px;
+    background: #eee;
+}
+
+.cbi-dropdown > .open,
+.cbi-dropdown > .more {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 2em;
+    padding: 0 .25em;
+}
+
+.cbi-dropdown > .more,
+.cbi-dropdown > ul > li[placeholder] {
+    color: #777;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #fff;
+    display: none;
+}
+
+.cbi-dropdown > ul > li {
+    display: none;
+    padding: .25em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+    flex-grow: 1;
+    align-items: center;
+    align-self: center;
+    min-height: 20px;
+}
+
+.cbi-dropdown > ul > li .hide-open { display: initial; }
+.cbi-dropdown > ul > li .hide-close { display: none; }
+
+.cbi-dropdown > ul > li[display]:not([display="0"]) {
+    border-left: 1px solid #ccc;
+}
+
+.cbi-dropdown[empty] > ul {
+    max-width: 1px;
+}
+
+.cbi-dropdown > ul > li > form {
+    display: none;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+}
+
+.cbi-dropdown > ul > li img {
+    vertical-align: middle;
+    margin-right: .25em;
+}
+
+.cbi-dropdown > ul > li > form > input[type="checkbox"] {
+    margin: 0;
+    height: auto;
+}
+
+.cbi-dropdown > ul > li input[type="text"] {
+    height: 20px;
+}
+
+.cbi-dropdown[open] {
+    position: relative;
+}
+
+.cbi-dropdown[open] > ul.dropdown {
+    display: block;
+    background: #f6f6f5;
+    border: 1px solid #918e8c;
+    box-shadow: 0 0 4px #918e8c;
+    position: absolute;
+    z-index: 1000;
+    max-width: none;
+    min-width: 100%;
+    width: auto;
+}
+
+.cbi-dropdown > ul > li[display],
+.cbi-dropdown[open] > ul.preview,
+.cbi-dropdown[open] > ul.dropdown > li,
+.cbi-dropdown[multiple] > ul > li > label,
+.cbi-dropdown[multiple][open] > ul.dropdown > li,
+.cbi-dropdown[multiple][more] > .more,
+.cbi-dropdown[multiple][empty] > .more {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.cbi-dropdown[empty] > ul > li,
+.cbi-dropdown[optional][open] > ul.dropdown > li[placeholder],
+.cbi-dropdown[multiple][open] > ul.dropdown > li > form {
+    display: block;
+}
+
+.cbi-dropdown[open] > ul.dropdown > li .hide-open { display: none; }
+.cbi-dropdown[open] > ul.dropdown > li .hide-close { display: initial; }
+
+.cbi-dropdown[open] > ul.dropdown > li {
+    border-bottom: 1px solid #ccc;
+}
+
+.cbi-dropdown[open] > ul.dropdown > li[selected] {
+    background: #b0d0f0;
+}
+
+.cbi-dropdown[open] > ul.dropdown > li.focus {
+    background: linear-gradient(90deg, #a3c2e8 0%, #84aad9 100%);
+}
+
+.cbi-dropdown[open] > ul.dropdown > li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.cbi-dropdown[disabled] {
+    pointer-events: none;
+    opacity: .6;
+}
+
+.cbi-dropdown .zonebadge {
+    width: 100%;
+}
+
+.cbi-dropdown[open] .zonebadge {
+    width: auto;
 }
 
 /* luci */
