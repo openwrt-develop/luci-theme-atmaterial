@@ -1655,7 +1655,8 @@ header > .container > .pull-right > * {
 }
 
 .node-main-login > .main .cbi-input-user,
-.node-main-login > .main .cbi-input-password {
+.node-main-login > .main .cbi-input-password,
+.node-main-login > .main .cbi-input-text {
     min-width: 15rem;
 }
 
