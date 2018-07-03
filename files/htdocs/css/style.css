@@ -58,7 +58,7 @@
 
 }
 
-.table { display: table; }
+.table { display: table; position: relative; }
 .tr { display: table-row; }
 .thead { display: table-header-group; }
 .tbody { display: table-row-group; }
@@ -631,7 +631,9 @@ h3 {
 }
 
 h4 {
-
+    margin: 2rem 0 0 0;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
 }
 
 label {
@@ -639,7 +641,7 @@ display: inline-block;
     padding: 0 10px;  
     vertical-align: middle;  
 }
-fieldset {
+.cbi-section {
     margin: 10px 0 0 0;
     padding: 2rem;
     border: 0;
@@ -658,7 +660,7 @@ fieldset {
     -webkit-overflow-scrolling: touch;
 }
 
-fieldset > legend {
+.cbi-section > legend {
     display: none !important;
 }
 
@@ -678,10 +680,12 @@ fieldset > fieldset {
     padding-bottom: 10px;
 }
 
-table,
-.table {
+table {
     border-spacing: 0;
     border-collapse: collapse;
+}
+
+table, .table {
     width: 100%;
     border: 1px solid #eee;
 	white-space: nowrap;
@@ -705,8 +709,8 @@ table > tbody > tr > td, table > tbody > tr > th, table > tfoot > tr > td, table
 	border-top: 1px dashed #EEE;
 }
 
-fieldset > table > tbody > tr:nth-of-type(2n),
-fieldset > .table > .tbody > .tr:nth-of-type(2n) {
+div > table > tbody > tr:nth-of-type(2n),
+div > .table > .tbody > .tr:nth-of-type(2n) {
     background-color: #f9f9f9;
 }
 
@@ -903,8 +907,8 @@ form.inline + form.inline,
     background-color: #F7F7F7;
 }
 
-.cbi-section-remove:nth-of-type(odd),
-.cbi-section-node:nth-of-type(odd){
+.cbi-section-remove:nth-of-type(2n),
+.cbi-section-node:nth-of-type(2n){
     background-color: #f9f9f9;
 }
 
@@ -1173,6 +1177,8 @@ form.inline + form.inline,
 }
 
 .cbi-page-actions {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
     text-align: right;
 }
 
@@ -1205,7 +1211,7 @@ td > .ifacebadge,
 .ifacebadge > img {
     float: right;
     margin-left: 0.3rem;
-    align-self: start;
+    align-self: flex-start;
 }
 
 /*textarea*/
@@ -1395,7 +1401,7 @@ td > .ifacebadge,
     cursor: pointer;
 }
 
-.zonebadge > .ifacebadge {
+.zonebadge .ifacebadge {
     padding: 0.2rem 1rem;
     margin: 0.3rem;
     border: 1px solid #6C6C6C;
@@ -1416,8 +1422,18 @@ td > .ifacebadge,
     min-width: 7rem;
 }
 
-.cbi-section-create > .cbi-button-add {
+.cbi-section-create {
+    margin: .5rem -3px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cbi-section-create > * {
     margin: 0.5rem;
+}
+
+.cbi-section-remove {
+    padding: 0.5rem;
 }
 
 div.cbi-value var, div.td.cbi-value-field var, td.cbi-value-field var {
@@ -1441,6 +1457,62 @@ small {
 .cbi-optionals {
     padding: 1rem 1rem 0 1rem;
     border-top: 1px solid #CCC;
+}
+
+.cbi-dropdown-container {
+    position: relative;
+}
+
+.cbi-tooltip-container {
+    cursor: help;
+}
+
+.cbi-tooltip {
+    position: absolute;
+    z-index: 1000;
+    left: -1000px;
+    opacity: 0;
+    transition: opacity .25s ease-out;
+    pointer-events: none;
+    box-shadow: 0 0 2px #444;
+}
+
+.cbi-tooltip-container:hover .cbi-tooltip {
+    left: auto;
+    opacity: 1;
+    transition: opacity .25s ease-in;
+}
+
+.zonebadge .cbi-tooltip {
+    padding: .25rem;
+    background: inherit;
+    margin: -1.5rem 0 0 -.5rem;
+}
+
+.zonebadge-empty {
+    background: repeating-linear-gradient(45deg,rgba(204,204,204,0.5),rgba(204,204,204,0.5) 5px,rgba(255,255,255,0.5) 5px,rgba(255,255,255,0.5) 10px);
+    color: #404040;
+}
+
+.zone-forwards {
+    display: flex;
+    min-width: 10rem;
+}
+
+.zone-forwards > * {
+    flex: 1 1 45%;
+}
+
+.zone-forwards > span {
+    flex-basis: 10%;
+    text-align: center;
+    padding: 0 .25rem;
+}
+
+.zone-forwards .zone-src,
+.zone-forwards .zone-dest {
+    display: flex;
+    flex-direction: column;
 }
 
 #diag-rc-output > pre {
@@ -1644,11 +1716,6 @@ header > .container > .pull-right > * {
 
 .cbi-tabmenu + .cbi-section {
     margin-top: 0;
-}
-
-/* fix network firewall*/
-.node-network-firewall > .main .cbi-section-table-row > .cbi-value-field .cbi-input-select {
-    min-width: 4rem;
 }
 
 .node-status-iptables fieldset,
@@ -1862,8 +1929,14 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1200px) {
     fieldset {
+        padding: 1rem;
+        margin: 1rem 0 0 0;
+        overflow-x: auto;
+    }
+
+    .cbi-section {
         padding: 1rem;
         margin: 1rem 0 0 0;
         overflow-x: auto;
