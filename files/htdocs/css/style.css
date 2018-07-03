@@ -74,6 +74,19 @@
     font-weight: bold;
 }
 
+.tr.placeholder {
+    height: 4em;
+}
+
+.tr.placeholder > .td {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    line-height: 3em;
+}
+
 .table[width="33%"], .th[width="33%"], .td[width="33%"] { width: 33%; }
 .table[width="100%"], .th[width="100%"], .td[width="100%"] { width: 100%; }
 
@@ -820,6 +833,7 @@ form.inline + form.inline,
 }
 
 .cbi-button-reset,
+.cbi-button-negative,
 .cbi-input-remove {
     color: #fff !important;
     background-color: #617486 !important;
@@ -839,12 +853,14 @@ form.inline + form.inline,
 
 .cbi-input-apply,
 .cbi-button-apply,
+.cbi-button-action,
 .cbi-button-edit {
     color: #fff !important;
     background-color: #cc181e;
 }
 
 .cbi-input-reset,
+.cbi-button-negative,
 .cbi-section-remove > .cbi-button,
 .cbi-button-remove {
     color: #fff !important;
@@ -979,7 +995,7 @@ form.inline + form.inline,
 
 .cbi-rowstyle-2 .cbi-button-up,
 .cbi-rowstyle-2 .cbi-button-down{
-    background-color: #FFF !important;
+    background-color: #65736c !important;
 }
 
 .cbi-section-table .cbi-section-table-titles .cbi-section-table-cell {
