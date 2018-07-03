@@ -1562,7 +1562,7 @@ header > .container > .pull-right > * {
 
 .label {
     padding: 0.3rem 0.8rem;
-    font-size: 10pt;
+    font-size: 11px;
     font-weight: bold;
     color: #ffffff !important;
     text-transform: uppercase;
