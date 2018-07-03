@@ -1950,7 +1950,7 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1050px) {
 	#wifi_assoclist_table { 
 		display: -webkit-inline-box;
 		position: relative; 
