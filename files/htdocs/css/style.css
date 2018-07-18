@@ -674,7 +674,7 @@ h3 {
 
 h4 {
     margin: 5px 0 0 0;
-    font-size: 8pt;
+    font-size: 10pt;
     padding-bottom: 10px;
 }
 
@@ -709,6 +709,8 @@ display: inline-block;
     margin-top: 1rem;
 }
 
+legend,
+fieldset > legend,
 .cbi-setion > legend {
     display: none !important;
 }
@@ -783,14 +785,10 @@ table > tbody > tr > td, table > tbody > tr > th, table > tfoot > tr > td, table
     width: calc(100% - 1.5rem);
 }
 
-div > table > tbody > tr:nth-of-type(2n),
-div > .table > .tbody > .tr:nth-of-type(2n) {
-    background-color: #f9f9f9;
-}
-
-div > table > tbody > tr:nth-of-type(2n),
-div > .table > .tbody > .tr:nth-of-type(2n) {
-
+fieldset > table > tbody > tr:nth-of-type(odd),
+fieldset > .table > .tbody > .tr:nth-of-type(odd),
+div > table > tbody > tr:nth-of-type(odd),
+div > .table > .tbody > .tr:nth-of-type(odd) {
     background-color: #f9f9f9;
 }
 
