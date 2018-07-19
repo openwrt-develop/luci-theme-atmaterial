@@ -2302,8 +2302,12 @@ body.lang_pl.node-main-login .cbi-value-title {
         padding: 0.5rem;
     }
 
+    body {
+        font-size: 0.9rem !important;
+    }
+
     h2 {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     .tabs > li > a {
