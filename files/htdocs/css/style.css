@@ -338,11 +338,23 @@ header > .container > a[class="brand"]:after {
     top:-10px;
     font-weight:normal !important;
 }
-.warning {
-    background-color: #FF7D60 !important;
-    color: #FFF;
+
+.danger {
+    background-color: #FA8072 !important;
+    color: black;
 }
 
+.warning {
+    background-color:  #F0E68C !important;
+    color: black;
+}
+
+.success {
+    background-color: #90EE90 !important;
+    color: black;
+}
+
+.errorbox,
 .alert-message {
     margin: 5px 0 0 0;
     padding: 1rem;
@@ -356,6 +368,12 @@ header > .container > a[class="brand"]:after {
     border-radius: 0;
     background-color: #FFF;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 2px 0 rgba(0, 0, 0, .12);
+}
+
+.errorbox {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
 }
 
 .error {
@@ -645,6 +663,7 @@ display: inline-block;
     padding: 0 10px;  
     vertical-align: middle;  
 }
+
 fieldset {
     margin: 10px 0 0 0;
     padding: 2rem;
@@ -664,6 +683,10 @@ fieldset {
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
     border-radius: 4px;
     -webkit-overflow-scrolling: touch;
+}
+
+.cbi-map-descr + fieldset {
+    margin-top: 1rem;
 }
 
 fieldset > legend {
