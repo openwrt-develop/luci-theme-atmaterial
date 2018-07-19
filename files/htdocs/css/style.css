@@ -588,9 +588,11 @@ header > .container > a[class="brand"]:after {
 .main > .main-left > .nav > .slide:hover {
     background: none;
 }
+
 .slide-menu {
     overflow:hidden;
-    }
+}
+
 .main > .main-left > .nav > .slide > .slide-menu > li {
     padding: 6px 50px;
     font-size:12px !important;
@@ -600,8 +602,8 @@ header > .container > a[class="brand"]:after {
 .slide-menu li:before {
     content: "";
     left: 30px;
-    top: -15px;
-    bottom: 15px;
+    top: -50%;
+    bottom: 50%;
     position: absolute;
     display: block;
     width: 1px;
@@ -624,7 +626,7 @@ header > .container > a[class="brand"]:after {
 .slide-menu li a:before {
     content: "";
     left: -20px;
-    top: 10px;
+    top: 50%;
     position: absolute;
     display: block;
     width: 15px;
