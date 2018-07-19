@@ -1457,12 +1457,30 @@ td > .ifacebadge,
     vertical-align: middle;
 }
 
+.cbi-value-field > input + .cbi-value-description {
+    padding: 0;
+}
+
+.cbi-value-field > ul > li {
+    display: flex;
+}
+
+.cbi-value-field > ul > li > label {
+    margin-top: 0.5rem;
+}
+
+.cbi-value-field > ul > li .ifacebadge {
+    background-color: #eee;
+    margin-left: 0.4rem;
+    margin-top: -0.5rem;
+}
+
 .cbi-section-table-row > .cbi-value-field .cbi-dropdown {
     min-width: 7rem;
 }
 
 .cbi-section-table-row > .cbi-value-field .cbi-input-select {
-    width: 7rem;
+    min-width: 7rem;
 }
 
 .cbi-section-create > .cbi-button-add {
