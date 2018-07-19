@@ -673,7 +673,7 @@ h3 {
 }
 
 h4 {
-    margin: 5px 0 0 0;
+    margin: 15px 0 0 0;
     font-size: 10pt;
     padding-bottom: 10px;
 }
@@ -1108,8 +1108,12 @@ td > table > tbody > tr > td,
     vertical-align: middle;
 }
 
+.cbi-rowstyle-1 {
+    background-color: #f9f9f9;
+}
+
 .cbi-rowstyle-2 {
-    background-color: #fcfdfd;
+    background-color: #eee;
 }
 
 .cbi-rowstyle-2 .cbi-button-up,
