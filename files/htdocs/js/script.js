@@ -199,13 +199,12 @@
         that.after("<span class='panel-title'>" + that.text() + "</span>");
     });
 
-    /*fix vlan prot*/
-    /*$(".cbi-section-table-titles, .cbi-section-table-descr, .cbi-section-descr").each(function () {
+    $(".cbi-section-table-titles, .cbi-section-table-descr, .cbi-section-descr").each(function () {
         var that = $(this);
         if (that.text().trim() == ""){
             that.css("display", "none");
         }
-    });*/
+    });
 
 
     $(".main-right").focus();
