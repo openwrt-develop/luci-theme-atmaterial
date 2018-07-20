@@ -732,6 +732,7 @@ fieldset > fieldset {
     color: #76838f;
     font-size: 10pt;
     padding-bottom: 10px;
+    /*border-bottom: 1px solid #e4eaec;*/
     margin: 0;
 }
 
@@ -1024,16 +1025,18 @@ td > table > tbody > tr > td,
     background-color: white;
 }
 
+.cbi-section-remove:nth-of-type(2n),
+.cbi-section-node:nth-of-type(2n){
+    background-color: #f9f9f9;
+}
+
 .cbi-section-node-tabbed {
     padding: 0;
     margin-top: 0;
+    /*border-top: 1px solid #e4eaec;*/
     border-bottom: 1px solid #e4eaec;
     border-left: 1px solid #e4eaec;
     border-right: 1px solid #e4eaec;
-}
-
-.cbi-tabcontainer {
-    clear:both;
 }
 
 .cbi-tabcontainer > .cbi-value:nth-of-type(2n) {
@@ -1043,6 +1046,7 @@ td > table > tbody > tr > td,
 .cbi-value-field,
 .cbi-value-description {
     display: table-cell;
+    line-height: 1.25;
 }
 
 .cbi-value-helpicon > img {
@@ -1884,6 +1888,7 @@ header > .container > .pull-right > * {
     background:#f7f7f7;
     margin-right:0 !important;
 }
+
 /* fix system reboot */
 
 .node-system-reboot > .main > .main-right p,
@@ -1893,6 +1898,7 @@ header > .container > .pull-right > * {
 /* fix Services  Network Shares*/
 .node-services-samba > .main .cbi-tabcontainer:nth-child(3) .cbi-value-title {
     margin-bottom: 1rem;
+    width: auto;
 }
 
 .node-services-samba > .main .cbi-tabcontainer:nth-child(3) .cbi-value-field {
