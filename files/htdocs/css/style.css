@@ -694,7 +694,6 @@ display: inline-block;
     font-style: normal;
     line-height: 1;
     font-family: inherit;
-
     min-width: inherit;
     /* overflow-x: hidden; */
     overflow-x: auto;
@@ -801,11 +800,9 @@ div > .table > .tbody > .tr:nth-of-type(2n) {
 /* fix progress bar */
 #swaptotal > div,
 #swapfree > div,
-#swapcache > div,
 #memfree > div,
 #membuff > div,
 #conns > div,
-#memcache > div,
 #memtotal > div {
     width: 100% !important;
     border-color:#ccc !important;
@@ -815,11 +812,9 @@ div > .table > .tbody > .tr:nth-of-type(2n) {
 
 #swaptotal > div > div,
 #swapfree > div > div,
-#swapcache > div > div,
 #memfree > div > div,
 #membuff > div > div,
 #conns > div > div,
-#memcache > div > div,
 #memtotal > div > div {
     height: 1.4rem !important;
     background-color: #e4eaec !important;
@@ -1128,7 +1123,7 @@ td > table > tbody > tr > td,
 }
 
 .cbi-rowstyle-2 {
-    background-color: #eee;
+    background-color: #ffffff;
 }
 
 .cbi-rowstyle-2 .cbi-button-up,
@@ -1398,9 +1393,9 @@ td > table > tbody > tr > td,
 
 td > .ifacebadge,
 .td > .ifacebadge {
-     background-color: #F0F0F0;
-     font-size: 0.9rem;
- }
+    background-color: #F0F0F0;
+    font-size: 0.9rem;
+}
 
 .ifacebadge > em,
 .ifacebadge > img {
@@ -1445,7 +1440,7 @@ td > .ifacebadge,
     min-width: 220px;
     background-color: #fff;
     align-items: center;
- }
+}
 
 /*textarea*/
 
@@ -1480,9 +1475,6 @@ td > .ifacebadge,
 }
 
 /* change */
-#wan4_i, #wan6_i {
-    width:50px !important;
-}
 
 .uci-change-list {
     font-family: monospace;
@@ -1585,7 +1577,7 @@ td > .ifacebadge,
 
 .ifacebox-body {
     padding: .25em;
- }
+}
 
 .cbi-image-button {
     margin: 5px 10px;
@@ -2407,6 +2399,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 }
 
 @media screen and (min-width: 992px) {
+    .cbi-value input[type="password"],
     .cbi-value input[type="text"],
     .cbi-value-field .cbi-input-select {
         width: 20rem;
@@ -2418,6 +2411,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 }
 
 @media screen and (min-width: 1280px) {
+    .cbi-value input[type="password"],
     .cbi-value input[type="text"],
     .cbi-value-field .cbi-input-select {
         width: 22rem;
@@ -2429,6 +2423,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 }
 
 @media screen and (min-width: 1600px) {
+    .cbi-value input[type="password"],
     .cbi-value input[type="text"],
     .cbi-value-field .cbi-input-select {
         width: 25rem;
