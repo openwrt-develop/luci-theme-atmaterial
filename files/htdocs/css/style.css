@@ -174,7 +174,7 @@ select,
 input,
 .cbi-dropdown {
     color: #76838f;
-    padding: 6px 10px;
+    padding: 0;
     margin: 0;
     height: 34px;
     line-height: normal;
