@@ -134,7 +134,6 @@
     clear:both;
 }
 
-
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -696,8 +695,8 @@ display: inline-block;
     font-family: inherit;
     min-width: inherit;
     /* overflow-x: hidden; */
-    overflow-x: auto;
-    overflow-y: hidden;
+    /* overflow-x: auto;
+    overflow-y: hidden; */
 
     border-radius: 0;
     background-color: #FFF;
@@ -790,6 +789,7 @@ table > tbody > tr > td, table > tbody > tr > th, table > tfoot > tr > td, table
     width: calc(100% - 1.5rem);
 }
 
+.tr:nth-of-type(2n),
 fieldset > table > tbody > tr:nth-of-type(2n),
 fieldset > .table > .tbody > .tr:nth-of-type(2n),
 div > table > tbody > tr:nth-of-type(2n),
@@ -1976,7 +1976,6 @@ body.lang_pl.node-main-login .cbi-value-title {
     width: 12rem;
 }
 
-
 @media screen and (max-width: 1600px) {
     .main-left {
         /*width: calc(0% + 15rem);*/
@@ -2353,8 +2352,8 @@ body.lang_pl.node-main-login .cbi-value-title {
         line-height: 1;
         font-family: inherit;
         min-width: inherit;
-        overflow-x: auto;
-        overflow-y: hidden;
+        /* overflow-x: auto;
+        overflow-y: hidden; */
         border-radius: 0;
         background-color: #FFF;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 2px 0 rgba(0, 0, 0, .12);
