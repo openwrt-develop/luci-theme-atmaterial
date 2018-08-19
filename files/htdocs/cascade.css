@@ -852,7 +852,7 @@ td > table > tbody > tr > td,
 .cbi-button-reload.important,
 .cbi-button-action.important {
     color: #fff !important;
-    background-color: #337ab7 !important;
+    background-color: #cc181e !important;
 }
 
 .cbi-page-actions .cbi-button-save,
@@ -893,7 +893,7 @@ td > table > tbody > tr > td,
 .cbi-button-save,
 .cbi-button-positive {
     color: #fff !important;
-    background-color: #008000 !important;
+    background-color: #337ab7 !important;
     border-color: #2e6da4 !important;
 }
 
@@ -902,7 +902,7 @@ td > table > tbody > tr > td,
 .cbi-button-reset,
 .cbi-button-negative {
     color: #fff !important;
-    background: #d9534f;
+    background: #617486;
 }
 
 .cbi-page-actions .cbi-button-link:first-child {
