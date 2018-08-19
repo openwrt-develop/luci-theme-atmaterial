@@ -90,6 +90,17 @@
 .table[width="33%"], .th[width="33%"], .td[width="33%"] { width: 33%; }
 .table[width="100%"], .th[width="100%"], .td[width="100%"] { width: 100%; }
 
+.col-1 { flex: 1 1 30px !important; -webkit-flex: 1 1 30px !important; white-space: pre-line; }
+.col-2 { flex: 2 2 60px !important; -webkit-flex: 2 2 60px !important; white-space: pre-line; }
+.col-3 { flex: 3 3 90px !important; -webkit-flex: 3 3 90px !important; white-space: pre-line; }
+.col-4 { flex: 4 4 120px !important; -webkit-flex: 4 4 120px !important; white-space: pre-line; }
+.col-5 { flex: 5 5 150px !important; -webkit-flex: 5 5 150px !important; white-space: pre-line; }
+.col-6 { flex: 6 6 180px !important; -webkit-flex: 6 6 180px !important; white-space: pre-line; }
+.col-7 { flex: 7 7 210px !important; -webkit-flex: 7 7 210px !important; white-space: pre-line; }
+.col-8 { flex: 8 8 240px !important; -webkit-flex: 8 8 240px !important; white-space: pre-line; }
+.col-9 { flex: 9 9 270px !important; -webkit-flex: 9 9 270px !important; white-space: pre-line; }
+.col-10 { flex: 10 10 300px !important; -webkit-flex: 10 10 300px !important; white-space: pre-line; }
+
 .cbi-button-up,
 .cbi-button-down,
 .cbi-value-helpicon,
@@ -987,6 +998,37 @@ form.inline + form.inline,
 .cbi-section-table-descr > .cbi-section-table-cell,
 .cbi-section-table-titles > .cbi-section-table-cell {
     border: none;
+}
+
+.td[data-title]::before {
+    content: attr(data-title) ":\20";
+    font-weight: bold;
+    text-align: left;
+    display: none;
+    padding: .25rem 0;
+    white-space: nowrap;
+}
+
+.tr.placeholder .td[data-title]::before {
+    display: none;
+}
+
+.tr[data-title]::before,
+.tr.cbi-section-table-titles.named::before {
+    content: attr(data-title) "\20";
+    font-weight: bold;
+    text-align: center;
+    display: table-cell;
+    align-self: center;
+    flex: 1 1 5%;
+    padding: .25rem;
+    white-space: normal;
+    word-wrap: break-word;
+    vertical-align: middle;
+}
+
+.cbi-rowstyle-1 {
+    background-color: #f9f9f9;
 }
 
 .cbi-rowstyle-2 {
