@@ -90,13 +90,13 @@
 .table[width="33%"], .th[width="33%"], .td[width="33%"] { width: 33%; }
 .table[width="100%"], .th[width="100%"], .td[width="100%"] { width: 100%; }
 
-.col-1 { flex: 1 1 30px !important; -webkit-flex: 1 1 30px !important; white-space: pre-line; }
-.col-2 { flex: 2 2 60px !important; -webkit-flex: 2 2 60px !important; white-space: pre-line; }
-.col-3 { flex: 3 3 90px !important; -webkit-flex: 3 3 90px !important; white-space: pre-line; }
-.col-4 { flex: 4 4 120px !important; -webkit-flex: 4 4 120px !important; white-space: pre-line; }
-.col-5 { flex: 5 5 150px !important; -webkit-flex: 5 5 150px !important; white-space: pre-line; }
-.col-6 { flex: 6 6 180px !important; -webkit-flex: 6 6 180px !important; white-space: pre-line; }
-.col-7 { flex: 7 7 210px !important; -webkit-flex: 7 7 210px !important; white-space: pre-line; }
+.col-1 { flex: 1 1 30px !important; -webkit-flex: 1 1 30px !important; }
+.col-2 { flex: 2 2 60px !important; -webkit-flex: 2 2 60px !important; }
+.col-3 { flex: 3 3 90px !important; -webkit-flex: 3 3 90px !important; }
+.col-4 { flex: 4 4 120px !important; -webkit-flex: 4 4 120px !important; }
+.col-5 { flex: 5 5 150px !important; -webkit-flex: 5 5 150px !important; }
+.col-6 { flex: 6 6 180px !important; -webkit-flex: 6 6 180px !important; }
+.col-7 { flex: 7 7 210px !important; -webkit-flex: 7 7 210px !important; }
 .col-8 { flex: 8 8 240px !important; -webkit-flex: 8 8 240px !important; white-space: pre-line; }
 .col-9 { flex: 9 9 270px !important; -webkit-flex: 9 9 270px !important; white-space: pre-line; }
 .col-10 { flex: 10 10 300px !important; -webkit-flex: 10 10 300px !important; white-space: pre-line; }
@@ -1040,7 +1040,18 @@ td > table > tbody > tr > td,
     white-space: nowrap;
 }
 
-.tr.placeholder .td[data-title]::before {
+.td[data-description]::after {
+       content: attr(data-description);
+       font-size: 90%;
+       text-align: left;
+       display: none;
+       background: url(/luci-static/resources/cbi/help.gif) left top no-repeat;
+       padding: .125em 0 .125em 18px;
+       margin: .125em 0;
+}
+
+.tr.placeholder .td[data-title]::before,
+.tr.placeholder .td[data-description]::after {
     display: none;
 }
 
