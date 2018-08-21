@@ -1064,7 +1064,7 @@ td > table > tbody > tr > td,
     align-self: center;
     flex: 1 1 5%;
     padding: .25rem;
-    white-space: normal;
+    white-space: nowrap;
     word-wrap: break-word;
     vertical-align: middle;
 }
