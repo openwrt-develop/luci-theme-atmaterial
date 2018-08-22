@@ -665,7 +665,9 @@ display: inline-block;
     padding: 0 10px;  
     vertical-align: middle;  
 }
-.cbi-section {
+
+.cbi-section,
+.cbi-section-node {
     margin: 10px 0 0 0;
     padding: 2rem;
     border: 0;
