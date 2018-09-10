@@ -1880,6 +1880,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 @media screen and (max-width: 1600px) {
     .main-left {
         /*width: calc(0% + 15rem);*/
+        -webkit-overflow-scrolling: touch;
     }
 
     .main-right {
@@ -1936,6 +1937,7 @@ body.lang_pl.node-main-login .cbi-value-title {
         width: calc(0% + 17rem);
         top: 3.5rem;
         height: calc(100% - 3.5rem);
+        -webkit-overflow-scrolling: touch;
     }
 
     .main-right {
@@ -1987,6 +1989,8 @@ body.lang_pl.node-main-login .cbi-value-title {
         width: 0;
         position: fixed;
         z-index: 100;
+        -webkit-overflow-scrolling: touch;
+	 
     }
 
     .main-right {
