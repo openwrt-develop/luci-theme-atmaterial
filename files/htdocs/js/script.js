@@ -158,14 +158,12 @@
             $(".main-left").stop(true).animate({
                 width: "0"
             }, "fast");
-            $(".main-right").css("overflow-y", "auto");
             showSide = false;
         } else {
             $(".darkMask").stop(true).fadeIn("fast");
             $(".main-left").stop(true).animate({
                 width: "15rem"
             }, "fast");
-            $(".main-right").css("overflow-y", "hidden");
             showSide = true;
         }
     });
@@ -178,7 +176,6 @@
             $(".main-left").stop(true).animate({
                 width: "0"
             }, "fast");
-            $(".main-right").css("overflow-y", "auto");
         }
     });
 

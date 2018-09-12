@@ -139,6 +139,11 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
+body {
+    font-size: 0.8rem;
+    background-color: #EEE;
+}
+
 html, body {
     margin: 0px;
     padding: 0px;
@@ -1884,7 +1889,8 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 
     .main-right {
-        width: calc(100% - 15rem);
+		width: calc(100% - 15rem);
+		-webkit-overflow-scrolling: touch; 
     }
 
     .cbi-button {
@@ -1942,6 +1948,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 
     .main-right {
         width: calc(100% - 17rem);
+		-webkit-overflow-scrolling: touch;   
     }
 
     .cbi-tabmenu > li > a, .tabs > li > a {
@@ -1995,6 +2002,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 
     .main-right {
         width: 100%;
+		-webkit-overflow-scrolling: touch;
     }
 
     .showSide {
