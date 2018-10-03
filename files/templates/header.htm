@@ -25,9 +25,6 @@
 	local disp = require "luci.dispatcher"
 
 	local boardinfo = util.ubus("system", "board")
-	local boardinfo={}
-	boardinfo.hostname=sys.hostname()
-	
 	local request  = disp.context.path
 	local request2 = disp.context.request
 
@@ -111,7 +108,7 @@
 
 			for i, r in ipairs(childs) do
 				local nnode = node.nodes[r]
-				local title = pcdata(striptags(translate(nnode.title)))
+				local title = striptags(translate(nnode.title))
 
 				write('<li><a data-title="%s" href="%s">%s</a></li>' %{
 					title,
@@ -135,7 +132,7 @@
 
 				if #grandchildren > 0 then
 					local origin_title = pcdata(striptags(nnode.title))
-					local title = pcdata(striptags(translate(nnode.title)))
+					local title = striptags(translate(nnode.title))
 
 					write('<li class="slide"><a class="menu" data-title="%s" href="#">%s</a>' %{
 						origin_title,
@@ -146,7 +143,7 @@
 					write('</li>')
 				else
 					local origin_title = pcdata(striptags(nnode.title))
-					local title = pcdata(striptags(translate(nnode.title)))
+					local title = striptags(translate(nnode.title))
 
 					write('<li><a data-title="%s" href="%s">%s</a></li>' %{
 						origin_title,
