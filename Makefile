@@ -36,7 +36,7 @@ define Package/luci-theme-$(THEME_NAME)/install
 	$(INSTALL_BIN) ./files/30_luci-theme-$(THEME_NAME) $(1)/etc/uci-defaults/luci-theme-$(THEME_NAME)	
 	$(INSTALL_DIR) $(1)/www/luci-static/$(THEME_NAME) $(1)/www
 	$(CP) -a ./files/htdocs/* $(1)/www/luci-static/$(THEME_NAME)/ 2>/dev/null || true
-	$(INSTALL_DIR) ./files/htdocs/favicon.ico $(1)/www/favicon.ico
+	$(INSTALL_DATA) ./files/htdocs/favicon.ico $(1)/www/favicon.ico
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/view/themes/$(THEME_NAME)
 	$(CP) -a ./files/templates/* $(1)/usr/lib/lua/luci/view/themes/$(THEME_NAME)/ 2>/dev/null || true
 endef
