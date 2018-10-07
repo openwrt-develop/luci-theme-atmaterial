@@ -336,12 +336,14 @@ header {
     color: white;
 }
 
-header > .container {
+header > .container,
+header > .fill > .container {
 margin:0;
 padding:0;
 }
 
-header > .container > .brand {
+header > .container > .brand,
+header > .fill > .container > .brand {
     font-size: 28px;
     line-height:60px;
     color: white;
@@ -356,7 +358,8 @@ header > .container > .brand {
     font-weight:600;
     letter-spacing:3px;
 }
-header > .container > a[class="brand"]:after {
+header > .container > a[class="brand"]:after,
+header > .fill > .container > a[class="brand"]:after {
     content:"®";
     font-size:14px;
     font-family:Tahoma;
@@ -364,6 +367,7 @@ header > .container > a[class="brand"]:after {
     top:-10px;
     font-weight:normal !important;
 }
+
 .danger {
     background-color: #FA8072 !important;
     color: black;
@@ -1982,7 +1986,8 @@ body.lang_pl.node-main-login .cbi-value-title {
         height: 3.5rem;
     }
 
-    header > .container > .brand {
+    header > .container > .brand,
+    header > .fill > .container > .brand {
         font-size: 18px;
         height: 3.5rem;
         line-height: 3.5rem;
