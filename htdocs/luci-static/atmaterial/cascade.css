@@ -966,6 +966,10 @@ td > table > tbody > tr > td,
     line-height: 1.25;
 }
 
+.cbi-value-field {
+	padding:6px 10px;
+}
+
 .cbi-input-invalid,
 .cbi-value-error input {
     color: #f00;
