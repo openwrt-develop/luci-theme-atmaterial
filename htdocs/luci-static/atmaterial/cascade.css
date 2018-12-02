@@ -193,7 +193,9 @@ input,
 }
 
 select:not([multiple="multiple"]):focus,
-input:focus {
+input:focus,
+.cbi-dropdown:focus,
+.cbi-dynlist > .item:focus {
     border-color: #0099CC;
 }
 
@@ -791,7 +793,7 @@ td > table > tbody > tr > td,
     color: #f00;
 }
 
-.cbi-button {
+.btn, .cbi-button, .item::after {
     -webkit-appearance: none;
     text-transform: uppercase;
     color: #fff;
