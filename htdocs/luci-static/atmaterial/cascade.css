@@ -823,6 +823,7 @@ td > table > tbody > tr > td,
 .cbi-button:hover,
 .cbi-button:focus,
 .cbi-button:active,
+.item:hover::after,
 .cbi-page-actions .cbi-button-apply + .cbi-button-save:hover,
 .cbi-page-actions .cbi-button-apply + .cbi-button-save:focus,
 .cbi-page-actions .cbi-button-apply + .cbi-button-save:active {
@@ -1095,16 +1096,13 @@ td > table > tbody > tr > td,
     font-size: small;
 }
 
+.cbi-dynlist,
 .cbi-dropdown {
     display: inline-flex;
     cursor: pointer;
     position: relative;
     padding: 0;
     height: auto;
-}
-
-.cbi-dropdown:focus {
-    outline: 2px solid #4b6e9b;
 }
 
 .cbi-dropdown > ul {
@@ -1244,6 +1242,19 @@ td > table > tbody > tr > td,
 .cbi-dropdown[open] > ul.dropdown > li:last-child {
     margin-bottom: 0;
     border-bottom: none;
+}
+
+.cbi-dropdown[open] > ul.dropdown > li[unselectable] {
+    opacity: 0.7;
+}
+ .cbi-dropdown[open] > ul.dropdown > li > input.create-item-input:first-child:last-child {
+    width: 100%;
+}
+ .cbi-dropdown[open] > ul.dropdown > li[unselectable] {
+    opacity: 0.7;
+}
+ .cbi-dropdown[open] > ul.dropdown > li > input.create-item-input:first-child:last-child {
+    width: 100%;
 }
 
 .cbi-dropdown[disabled] {
