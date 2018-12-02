@@ -1270,6 +1270,63 @@ td > table > tbody > tr > td,
     width: auto;
 }
 
+.cbi-dynlist {
+    height: auto;
+    min-height: 30px;
+    display: inline-flex;
+    flex-direction: column;
+}
+ .cbi-dynlist > .item {
+    margin: 0 2em 4px 0;
+    padding: 2px 4px;
+    border-bottom: 2px solid rgba(0, 0, 0, .26);
+    position: relative;
+    pointer-events: none;
+    cursor: default;
+}
+ .cbi-dynlist > .item::after {
+    content: "×";
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    top: 0;
+    right: -2em;
+    bottom: 0;
+    padding: 0 6px;
+    border: 1px solid #c44;
+    font-weight: bold;
+    color: #c44;
+    pointer-events: auto;
+}
+ .cbi-dynlist {
+    height: auto;
+    min-height: 30px;
+    display: inline-flex;
+    flex-direction: column;
+}
+ .cbi-dynlist > .item {
+    margin: 0 2em 4px 0;
+    padding: 2px 4px;
+    border-bottom: 2px solid rgba(0, 0, 0, .26);
+    position: relative;
+    pointer-events: none;
+    cursor: default;
+}
+ .cbi-dynlist > .item::after {
+    content: "×";
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    top: 0;
+    right: -2em;
+    bottom: 0;
+    padding: 0 6px;
+    border: 1px solid #c44;
+    font-weight: bold;
+    color: #c44;
+    pointer-events: auto;
+}
+
 /* luci */
 
 .hidden {
