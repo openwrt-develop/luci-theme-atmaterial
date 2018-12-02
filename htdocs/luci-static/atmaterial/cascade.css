@@ -1430,7 +1430,7 @@ td > table > tbody > tr > td,
 	background: #fff;
 }
  .cbi-progressbar > div {
-	background: var(--main-color, #0099CC);
+	background: #90EE90;
 	height: 100%;
 	transition: width .25s ease-in;
 	width: 0%;
