@@ -1574,6 +1574,10 @@ small {
     position: absolute;
     z-index: 1000;
     left: -1000px;
+    border-radius: 3px;
+    background: #fff;
+    padding: 2px 5px;
+    white-space: pre;
     opacity: 0;
     transition: opacity .25s ease-out;
     pointer-events: none;
