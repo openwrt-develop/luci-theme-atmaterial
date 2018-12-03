@@ -1190,7 +1190,7 @@ td > table > tbody > tr > td,
 
 .cbi-dropdown[open] > ul.dropdown {
     display: block;
-    background: #f6f6f5;
+    background: #f9f9f9;
     border: 1px solid #918e8c;
     box-shadow: 0 0 4px #918e8c;
     position: absolute;
