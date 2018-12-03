@@ -1277,6 +1277,7 @@ td > table > tbody > tr > td,
     position: relative;
     pointer-events: none;
     cursor: default;
+    word-break: break-all;
 }
  .cbi-dynlist > .item::after {
     content: "×";
