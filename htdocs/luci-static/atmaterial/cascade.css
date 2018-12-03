@@ -1198,6 +1198,7 @@ td > table > tbody > tr > td,
     max-width: none;
     min-width: 100%;
     width: auto;
+    max-width: fit-content;
 }
 
 .cbi-dropdown > ul > li[display],
@@ -1292,6 +1293,14 @@ td > table > tbody > tr > td,
     font-weight: bold;
     color: #c44;
     pointer-events: auto;
+}
+
+.cbi-dynlist > .add-item {
+	display: flex;
+}
+
+.cbi-dynlist > .add-item > input {
+	flex: 1 1 auto;
 }
 
 #modal_overlay {
