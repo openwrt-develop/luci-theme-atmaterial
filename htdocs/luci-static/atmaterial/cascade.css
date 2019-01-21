@@ -1123,7 +1123,7 @@ body.modal-overlay-active #modal_overlay {
 	z-index: 1000;
 	display: block;
 	width: auto;
-	max-width: none;
+	max-width: fit-content;
 	min-width: 100%;
 	border: 1px solid #918e8c;
 	background: #f6f6f5;
