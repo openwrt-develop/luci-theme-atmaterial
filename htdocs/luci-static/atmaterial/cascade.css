@@ -762,7 +762,7 @@ table {
 }
 
 .cbi-button-negative.important,.cbi-button-remove.important,.cbi-button-reset.important {
-	background-color: #d9534f!important;
+	background-color: #c93b36!important;
 	color: #fff!important;
 }
 
@@ -773,7 +773,7 @@ table {
 }
 
 .cbi-button-action,.cbi-button-apply,.cbi-button-edit,.cbi-button-reload {
-	background-color: #cc181e;
+	background-color: #337ab7;
 	color: #fff!important;
 }
 
@@ -784,7 +784,7 @@ table {
 }
 
 .cbi-button-negative,.cbi-button-remove,.cbi-button-reset,.cbi-section-remove>.cbi-button {
-	background: #337ab7;
+	background: #c93b36;
 	color: #fff!important;
 }
 
@@ -1199,7 +1199,7 @@ body.modal-overlay-active #modal_overlay {
 	flex: 1 1 auto;
 }
 
-.btn, .cbi-button, .item::after {
+.item::after {
     -webkit-appearance: none;
     text-transform: uppercase;
     color: #fff;
