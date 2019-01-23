@@ -1199,7 +1199,7 @@ body.modal-overlay-active #modal_overlay {
 	flex: 1 1 auto;
 }
 
-.item::after {
+.btn, .item::after {
     -webkit-appearance: none;
     text-transform: uppercase;
     color: #fff;
