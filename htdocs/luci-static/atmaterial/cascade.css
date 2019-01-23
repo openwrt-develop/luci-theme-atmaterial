@@ -129,7 +129,7 @@
 	font-style: normal!important;
 	font-variant: normal!important;
 	font-size: 10px;
-	font-family: icomoon,advancedtomato!important;
+	font-family: icomoon,Roboto!important;
 	line-height: 1;
 	speak: none;
 	-webkit-font-smoothing: antialiased;
@@ -146,7 +146,7 @@
 	clear: both;
 	color: inherit;
 	font-weight: 500;
-	font-family: advancedtomato,Microsoft Yahei!important;
+	font-family: Roboto,Microsoft Yahei!important;
 	line-height: 1.1;
 }
 
@@ -166,7 +166,7 @@ body,html {
 	height: 100%;
 	color: #3d3c3b;
 	font-size: 10pt;
-	font-family: advancedtomato,Microsoft Yahei!important;
+	font-family: Roboto,Microsoft Yahei!important;
 }
 
 body,body div,html {
@@ -201,7 +201,7 @@ select {
 	color: #007d65;
 	vertical-align: baseline;
 	font-size: 10pt;
-	font-family: advancedtomato,sans-serif;
+	font-family: Roboto,sans-serif;
 	line-height: normal;
 	-webkit-transition: color .15s ease,border-color .15s ease,opacity .15s ease;
 	transition: color .15s ease,border-color .15s ease,opacity .15s ease;
@@ -1342,7 +1342,7 @@ body.modal-overlay-active #modal_overlay {
 	color: #0a1eb9;
 	vertical-align: baseline;
 	font-size: 10pt;
-	font-family: advancedtomato,sans-serif;
+	font-family: Roboto,sans-serif;
 	line-height: normal;
 	-webkit-transition: color .15s ease,border-color .15s ease,opacity .15s ease;
 	transition: color .15s ease,border-color .15s ease,opacity .15s ease;
