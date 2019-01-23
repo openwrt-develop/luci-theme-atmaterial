@@ -10,13 +10,13 @@
 }
 
 @font-face {
-	font-weight:400;
-	font-style:normal;
-	font-family:advancedtomato;
-	src:url(fonts/advancedtomato.eot?#iefix) format("embedded-opentype"),
-		url(fonts/advancedtomato.woff) format("woff"),
-		url(fonts/advancedtomato.ttf) format("truetype"),
-		url(fonts/advancedtomato.svg#advancedtomato) format("svg");
+	font-weight: 400;
+	font-style: normal;
+	font-family: advancedtomato;
+	src: url(fonts/advancedtomato.eot?#iefix) format("embedded-opentype"),
+	url(fonts/advancedtomato.woff) format("woff"),
+	url(fonts/advancedtomato.ttf) format("truetype"),
+	url(fonts/advancedtomato.svg#advancedtomato) format("svg");
 }
 
 .table {
@@ -129,7 +129,7 @@
 	font-style: normal!important;
 	font-variant: normal!important;
 	font-size: 10px;
-	font-family: icomoon,Roboto!important;
+	font-family: icomoon,advancedtomato!important;
 	line-height: 1;
 	speak: none;
 	-webkit-font-smoothing: antialiased;
@@ -146,7 +146,7 @@
 	clear: both;
 	color: inherit;
 	font-weight: 500;
-	font-family: Roboto,Microsoft Yahei!important;
+	font-family: advancedtomato,Microsoft Yahei!important;
 	line-height: 1.1;
 }
 
@@ -166,7 +166,7 @@ body,html {
 	height: 100%;
 	color: #3d3c3b;
 	font-size: 10pt;
-	font-family: Roboto,Microsoft Yahei!important;
+	font-family: advancedtomato,Microsoft Yahei!important;
 }
 
 body,body div,html {
@@ -201,7 +201,7 @@ select {
 	color: #007d65;
 	vertical-align: baseline;
 	font-size: 10pt;
-	font-family: Roboto,sans-serif;
+	font-family: advancedtomato,sans-serif;
 	line-height: normal;
 	-webkit-transition: color .15s ease,border-color .15s ease,opacity .15s ease;
 	transition: color .15s ease,border-color .15s ease,opacity .15s ease;
@@ -331,7 +331,7 @@ header>.container {
 }
 
 header>.container>.brand,
-header > .fill > .container > .brand { {
+header > .fill > .container > .brand {
 	float: left;
 	display: block;
 	padding-right: 10px;
@@ -1342,7 +1342,7 @@ body.modal-overlay-active #modal_overlay {
 	color: #0a1eb9;
 	vertical-align: baseline;
 	font-size: 10pt;
-	font-family: Roboto,sans-serif;
+	font-family: advancedtomato,sans-serif;
 	line-height: normal;
 	-webkit-transition: color .15s ease,border-color .15s ease,opacity .15s ease;
 	transition: color .15s ease,border-color .15s ease,opacity .15s ease;
