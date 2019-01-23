@@ -330,7 +330,8 @@ header>.container {
 	padding: 0;
 }
 
-header>.container>.brand {
+header>.container>.brand,
+header > .fill > .container > .brand { {
 	float: left;
 	display: block;
 	padding-right: 10px;
@@ -346,11 +347,12 @@ header>.container>.brand {
 	cursor: default;
 }
 
-header>.container>a[class=brand]:after {
+header>.container>a[class=brand]:after,
+header > .fill > .container > a[class="brand"]:after {
 	position: absolute;
 	top: -10px;
 	content: "®";
-	font-weight: 400!important;
+	font-weight: normal!important;
 	font-size: 14px;
 	font-family: Tahoma;
 }
