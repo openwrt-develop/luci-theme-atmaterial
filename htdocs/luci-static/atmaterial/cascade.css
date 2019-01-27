@@ -1485,6 +1485,10 @@ body.modal-overlay-active #modal_overlay {
 	min-width: 7rem;
 }
 
+.cbi-section-table-row >.cbi-value-field {
+    white-space: normal;
+}
+
 .cbi-section-create {
 	display: inline-flex;
 	margin: .5rem -3px;
