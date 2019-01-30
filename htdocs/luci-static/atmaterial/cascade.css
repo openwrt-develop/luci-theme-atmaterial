@@ -1758,9 +1758,17 @@ body.lang_pl.node-main-login .cbi-value-title {
 	line-height: 300%;
 }
 
+.zonebadge {
+    white-space: normal;
+}
+
+#packages {
+    overflow-x: auto;
+    display: block;
+}
+
 .cbi-dropdown .zonebadge,.node-main-login>.main>.main-right,.table[width="100%"],.td[width="100%"],.th[width="100%"] {
 	width: 100%;
-	white-space: normal;
 }
 
 .cbi-page-actions .cbi-button-link:first-child,.pull-left {
