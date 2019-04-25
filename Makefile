@@ -11,7 +11,7 @@ THEME_TITLE:=ATMaterial
 
 PKG_NAME:=luci-theme-$(THEME_NAME)
 PKG_VERSION:=0.2.17
-PKG_RELEASE:=1
+PKG_RELEASE:=4
 
 include $(INCLUDE_DIR)/package.mk
 

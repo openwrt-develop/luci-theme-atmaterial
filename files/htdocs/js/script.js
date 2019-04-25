@@ -35,6 +35,7 @@
 
     var nodeUrl = "";
     (function(node){
+        var luciLocation;
         if (node[0] == "admin"){
             luciLocation = [node[1], node[2]];
         }else{
@@ -158,7 +159,7 @@
             $(".main-left").stop(true).animate({
                 width: "0"
             }, "fast");
-            $(".main-right").css("overflow-y", "auto");
+            $(".main-right").css("overflow-y", "visible");
             showSide = false;
         } else {
             $(".darkMask").stop(true).fadeIn("fast");
@@ -178,7 +179,7 @@
             $(".main-left").stop(true).animate({
                 width: "0"
             }, "fast");
-            $(".main-right").css("overflow-y", "auto");
+            $(".main-right").css("overflow-y", "visible");
         }
     });
 
