@@ -206,7 +206,6 @@ h6 {
 	font-weight: 400;
 	line-height: 1.1;
 	color: inherit;
-	/*--clear:both;*/
 }
 
 html {
@@ -290,6 +289,7 @@ input:not(.cbi-button):focus,
 	border-color: #09c;
 }
 
+.cbi-dropdown,
 select[multiple="multiple"] {
 	height: auto;
 }
@@ -601,47 +601,47 @@ header > .container > a[class="brand"]:after {
     -webkit-font-smoothing: antialiased;
 }
 
-.main > .main-left > .nav > .slide > a[data-title="Status"]:before {
+.main > .main-left > .nav > .slide > a[data-title="status"]:before {
     content: "\e026";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="System"]:before {
+.main > .main-left > .nav > .slide > a[data-title="system"]:before {
     content: "\e00a";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="Network"]:before {
+.main > .main-left > .nav > .slide > a[data-title="network"]:before {
     content: "\e00e";
 }
-.main > .main-left > .nav > .slide > a[data-title="VPN"]:before {
+.main > .main-left > .nav > .slide > a[data-title="vpn"]:before {
     content: "\e029";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="Services"]:before {
+.main > .main-left > .nav > .slide > a[data-title="services"]:before {
     content: "\e01b";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="NAS"]:before {
+.main > .main-left > .nav > .slide > a[data-title="nas"]:before {
     content: "\e00b";
 }
 
-.main> .main-left> .nav> .slide > a[data-title=Statistics]:before {
+.main> .main-left> .nav> .slide > a[data-title="statistics"]:before {
     content: "\e00f";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="Control"]:before {
+.main > .main-left > .nav > .slide > a[data-title="control"]:before {
     content: "\e023";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="Bandwidth Monitor"]:before {
+.main > .main-left > .nav > .slide > a[data-title="nlbw"]:before {
     content: "\e00f";
 }
 
-.main > .main-left > .nav > li > a[data-title="Logout"] {
+.main > .main-left > .nav > li > a[data-title="logout"] {
     padding-left:36px;
     line-height:40px;
 }
 
-.main > .main-left > .nav > li > a[data-title="Logout"]:before {
+.main > .main-left > .nav > li > a[data-title="logout"]:before {
     content: "\e005";
     display: inline-block;
     top: -1px;
@@ -813,6 +813,7 @@ label {
 #cbi-network > .cbi-section-node,
 #cbi-wireless > .cbi-section-node,
 #cbi-wireless > #wifi_assoclist_table,
+[data-tab-title],
 [data-page^="admin-system-admin"]:not(.node-main-login) .cbi-map:not(#cbi-dropbear),
 [data-page="admin-system-opkg"] #maincontent > .container {
     margin: 10px 0 0 0;
@@ -832,6 +833,23 @@ label {
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
     border-radius: 4px;
     -webkit-overflow-scrolling: touch;
+}
+
+.cbi-modal .cbi-section,
+.cbi-section .cbi-section {
+	padding: 0;
+	box-shadow: none;
+}
+
+.cbi-modal .cbi-tabmenu {
+	margin-left: 0;
+}
+
+.cbi-map-descr,
+.cbi-section-descr {
+	font-size: small;
+	margin-bottom:10px;
+	padding-left:5px;
 }
 
 .cbi-map-descr + fieldset {
@@ -862,15 +880,25 @@ fieldset > fieldset,
     margin: 0;
 }
 
+.cbi-section > h3:first-child,
+.cbi-section > h4:first-child,
+.cbi-section > p:first-child,
+[data-tab-title] > h3:first-child,
+[data-tab-title] > h4:first-child,
+[data-tab-title] > p:first-child {
+	padding-top: 1rem;
+}
+
 table {
     border-spacing: 0;
     border-collapse: collapse;
 }
 
-table, .table {
-    overflow-y: hidden;
-    width: 100%;
-    border: 1px solid #eee;
+table,
+.table {
+	overflow-y: hidden;
+	width: 100%;
+	border: 1px solid #eee;
 }
 
 table > tbody > tr > td,
@@ -1108,10 +1136,24 @@ form[method="post"] + form[method="post"],
     background-color: #617486 !important;
 }
 
+.cbi-button-up,
+.cbi-button-down {
+	font-size: 1.2rem;
+	display: inline-block;
+	min-width: 0;
+	padding: .2rem .3rem;
+	color: transparent !important;
+	background: url(./icons/arrow.svg) no-repeat center;
+	background-size: 12px 20px;
+	background-color: #337ab7 !important;
+	border-color: #2e6da4 !important;
+}
+
+.cbi-button-up {
+	transform: scaleY(-1);
+}
 .cbi-button-find,
 .cbi-button-link,
-.cbi-button-up,
-.cbi-button-down,
 .cbi-button-neutral {
     color: #fff !important;
     background-color: #337ab7 !important;
@@ -1218,16 +1260,19 @@ form[method="post"] + form[method="post"],
 }
 
 [data-tab-title] {
+	overflow: hidden;
 	height: 0;
 	opacity: 0;
-	overflow: hidden;
+	margin: 0;
+	padding: 0rem 1rem !important;
 }
 
 [data-tab-active="true"] {
-	opacity: 1;
-	height: auto;
 	overflow: visible;
+	height: auto;
+	opacity: 1;
 	transition: opacity .25s ease-in;
+	margin: inherit !important;
 }
 
 .cbi-section[id] .cbi-section-remove:nth-of-type(4n+3),
@@ -1386,14 +1431,7 @@ form[method="post"] + form[method="post"],
 	margin: 0;
 }
 
-/* desc */
-.cbi-section-descr,
-.cbi-map-descr {
-	font-size: small;
-	margin-bottom:10px;
-	padding-left:5px;
-}
-
+/* lists */
 .cbi-dynlist {
 	line-height: 1.3;
 	flex-direction: column;
@@ -1648,6 +1686,8 @@ form[method="post"] + form[method="post"],
 .modal > * {
 	line-height: normal;
 	flex-basis: 100%;
+	margin-bottom: .5em;
+	max-width: 100%;
 }
 
 .modal > pre,
@@ -1701,6 +1741,11 @@ form[method="post"] + form[method="post"],
 
 .modal .spinning {
 	margin-bottom: 2em;
+}
+
+.modal.cbi-modal {
+	max-width: 90%;
+	max-height: none;
 }
 
 body.modal-overlay-active {
@@ -2956,7 +3001,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 	}
 
 	#maincontent > .container {
-		margin: 0 1rem 1.5rem 1rem;
+		margin: 0 .5rem 1.5rem .5rem;
 	}
 
 	.main > .main-left > .nav > .slide > .menu {
@@ -3110,13 +3155,40 @@ body.lang_pl.node-main-login .cbi-value-title {
 		font-size: .62rem;
 	}
 
-	#cbi-wireless .td {
+	#cbi-wireless > #wifi_assoclist_table .td {
 		overflow: hidden;
+	}
+
+	#cbi-wireless > .cbi-section-node .td,
+	.Interfaces .td.cbi-section-actions {
+		text-align: center !important;
+	}
+
+	[data-page="admin-status-processes"] .td[data-title="Hang Up"]::before,
+	[data-page="admin-status-processes"] .td[data-title="Terminate"]::before,
+	[data-page="admin-status-processes"] .td[data-title="Kill"]::before {
+		display: none;
 	}
 
 	.hide-sm,
 	.hide-xs:not([data-title="MAC-Address"]) {
 		display: none;
+	}
+
+	.cbi-modal {
+		padding: .5rem;
+	}
+
+	.cbi-modal .cbi-value {
+		padding: 0 0 .25rem 0;
+	}
+
+	.cbi-modal [data-tab-title] {
+		padding: 0 .25rem !important;
+	}
+
+	[data-tab-title] {
+		padding: 0 .5rem !important;
 	}
 }
 
